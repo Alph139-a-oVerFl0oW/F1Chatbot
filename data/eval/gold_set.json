@@ -1,0 +1,839 @@
+[
+  {
+    "id": "gold-0000",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Emilia Romagna Grand Prix in 2021?",
+    "expected": "Verstappen",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0001",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Italian Grand Prix in 1979?",
+    "expected": "Scheckter",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0002",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the German Grand Prix in 1982?",
+    "expected": "Tambay",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0003",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Monaco Grand Prix in 2009?",
+    "expected": "Button",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0004",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Belgian Grand Prix in 1977?",
+    "expected": "Nilsson",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0005",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Mexican Grand Prix in 1963?",
+    "expected": "Clark",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0006",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Dutch Grand Prix in 1983?",
+    "expected": "Arnoux",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0007",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the United States Grand Prix in 2007?",
+    "expected": "Hamilton",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0008",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the United States Grand Prix in 1966?",
+    "expected": "Clark",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0009",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the Belgian Grand Prix in 1982?",
+    "expected": "Watson",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0010",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the German Grand Prix in 2002?",
+    "expected": "Schumacher",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0011",
+    "source": "generated",
+    "category": "race_winner",
+    "question": "Who won the United States Grand Prix West in 1976?",
+    "expected": "Regazzoni",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0012",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1959 drivers' championship?",
+    "expected": "Brabham",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0013",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 2004 drivers' championship?",
+    "expected": "Schumacher",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0014",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1958 drivers' championship?",
+    "expected": "Hawthorn",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0015",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 2024 drivers' championship?",
+    "expected": "Verstappen",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0016",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 2006 drivers' championship?",
+    "expected": "Alonso",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0017",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1956 drivers' championship?",
+    "expected": "Fangio",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0018",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1961 drivers' championship?",
+    "expected": "Hill",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0019",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 2016 drivers' championship?",
+    "expected": "Rosberg",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0020",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1957 drivers' championship?",
+    "expected": "Fangio",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0021",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1981 drivers' championship?",
+    "expected": "Piquet",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0022",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1966 drivers' championship?",
+    "expected": "Brabham",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0023",
+    "source": "generated",
+    "category": "drivers_champion",
+    "question": "Who won the 1977 drivers' championship?",
+    "expected": "Lauda",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0024",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1972 constructors' championship?",
+    "expected": "Team Lotus",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0025",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1991 constructors' championship?",
+    "expected": "McLaren",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0026",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 2004 constructors' championship?",
+    "expected": "Ferrari",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0027",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1989 constructors' championship?",
+    "expected": "McLaren",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0028",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 2014 constructors' championship?",
+    "expected": "Mercedes",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0029",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1978 constructors' championship?",
+    "expected": "Team Lotus",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0030",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1985 constructors' championship?",
+    "expected": "McLaren",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0031",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1984 constructors' championship?",
+    "expected": "McLaren",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0032",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 2019 constructors' championship?",
+    "expected": "Mercedes",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0033",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1987 constructors' championship?",
+    "expected": "Williams",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0034",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1986 constructors' championship?",
+    "expected": "Williams",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0035",
+    "source": "generated",
+    "category": "constructors_champion",
+    "question": "Which team won the 1967 constructors' championship?",
+    "expected": "Brabham-Repco",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0036",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Nigel Mansell have?",
+    "expected": "31",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0037",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Jenson Button have?",
+    "expected": "15",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0038",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Lando Norris have?",
+    "expected": "12",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0039",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Jacques Villeneuve have?",
+    "expected": "11",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0040",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Max Verstappen have?",
+    "expected": "71",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0041",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Mario Andretti have?",
+    "expected": "12",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0042",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Kimi Räikkönen have?",
+    "expected": "21",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0043",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Sebastian Vettel have?",
+    "expected": "53",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0044",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Rubens Barrichello have?",
+    "expected": "11",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0045",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Ronnie Peterson have?",
+    "expected": "10",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0046",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Alberto Ascari have?",
+    "expected": "13",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0047",
+    "source": "generated",
+    "category": "career_wins",
+    "question": "How many career race wins does Valtteri Bottas have?",
+    "expected": "10",
+    "match": "number",
+    "note": "requires findDriver then driverCareer"
+  },
+  {
+    "id": "gold-0048",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2010 Chinese Grand Prix?",
+    "expected": "Vettel",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0049",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2017 Austrian Grand Prix?",
+    "expected": "Bottas",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0050",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2014 Belgian Grand Prix?",
+    "expected": "Rosberg",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0051",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2023 Bahrain Grand Prix?",
+    "expected": "Verstappen",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0052",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2015 Abu Dhabi Grand Prix?",
+    "expected": "Rosberg",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0053",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2023 United States Grand Prix?",
+    "expected": "Leclerc",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0054",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2022 Emilia Romagna Grand Prix?",
+    "expected": "Verstappen",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0055",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2016 Mexican Grand Prix?",
+    "expected": "Hamilton",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0056",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2004 Canadian Grand Prix?",
+    "expected": "Schumacher",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0057",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2024 Japanese Grand Prix?",
+    "expected": "Verstappen",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0058",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2003 United States Grand Prix?",
+    "expected": "Räikkönen",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0059",
+    "source": "generated",
+    "category": "pole_position",
+    "question": "Who took pole position for the 2015 Bahrain Grand Prix?",
+    "expected": "Hamilton",
+    "match": "name",
+    "note": "qualifying data is only exposed via raceResults detail"
+  },
+  {
+    "id": "gold-0060",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1984 Formula 1 season?",
+    "expected": "16",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0061",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1957 Formula 1 season?",
+    "expected": "8",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0062",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 2009 Formula 1 season?",
+    "expected": "17",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0063",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1990 Formula 1 season?",
+    "expected": "16",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0064",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 2005 Formula 1 season?",
+    "expected": "19",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0065",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1975 Formula 1 season?",
+    "expected": "14",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0066",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1986 Formula 1 season?",
+    "expected": "16",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0067",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1991 Formula 1 season?",
+    "expected": "16",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0068",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 2000 Formula 1 season?",
+    "expected": "17",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0069",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1965 Formula 1 season?",
+    "expected": "10",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0070",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 1983 Formula 1 season?",
+    "expected": "15",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0071",
+    "source": "generated",
+    "category": "season_length",
+    "question": "How many races were there in the 2008 Formula 1 season?",
+    "expected": "18",
+    "match": "number",
+    "note": ""
+  },
+  {
+    "id": "gold-0072",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Mosport International Raceway located?",
+    "expected": "Canada",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0073",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Donington Park located?",
+    "expected": "UK",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0074",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Autodromo Nazionale di Monza located?",
+    "expected": "Italy",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0075",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Montjuïc located?",
+    "expected": "Spain",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0076",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Circuit de Barcelona-Catalunya located?",
+    "expected": "Spain",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0077",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Marina Bay Street Circuit located?",
+    "expected": "Singapore",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0078",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Albert Park Grand Prix Circuit located?",
+    "expected": "Australia",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0079",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Sochi Autodrom located?",
+    "expected": "Russia",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0080",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Kyalami located?",
+    "expected": "South Africa",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0081",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Suzuka Circuit located?",
+    "expected": "Japan",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0082",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Silverstone Circuit located?",
+    "expected": "UK",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0083",
+    "source": "generated",
+    "category": "circuit_country",
+    "question": "In which country is the Buddh International Circuit located?",
+    "expected": "India",
+    "match": "name",
+    "note": ""
+  },
+  {
+    "id": "gold-0084",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1955 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0085",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1951 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0086",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1953 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0087",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1950 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0088",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1954 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0089",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1952 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0090",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1957 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0091",
+    "source": "generated",
+    "category": "negative_constructors",
+    "question": "Who won the 1956 constructors' championship?",
+    "expected": "did not exist",
+    "match": "phrase",
+    "note": "constructors' championship began in 1958"
+  },
+  {
+    "id": "gold-0092",
+    "source": "generated",
+    "category": "negative_future",
+    "question": "Who won the 2035 drivers' championship?",
+    "expected": "no data",
+    "match": "phrase",
+    "note": "season not in database"
+  }
+]
