@@ -1,0 +1,49 @@
+<section class="favs">
+  <h1 class="favs__title">Your garage</h1>
+  <p class="favs__subtitle">
+    Signed in as {{ auth.user()?.displayName }}. Add by reference &mdash; for example
+    <code>max_verstappen</code>, <code>ferrari</code>, or <code>monza</code>.
+  </p>
+
+  <div class="favs__add">
+    <select [(ngModel)]="newType" [disabled]="saving()">
+      @for (type of types; track type) {
+        <option [value]="type">{{ type.charAt(0) + type.slice(1).toLowerCase() }}</option>
+      }
+    </select>
+    <input
+      type="text"
+      placeholder="reference, e.g. hamilton"
+      [(ngModel)]="newRef"
+      [disabled]="saving()"
+      (keydown.enter)="add()" />
+    <button type="button" (click)="add()" [disabled]="saving() || !newRef.trim()">Add</button>
+  </div>
+
+  @if (error(); as message) {
+    <p class="favs__error">{{ message }}</p>
+  }
+
+  @if (loading()) {
+    <p class="favs__muted">Loading&hellip;</p>
+  } @else if (items().length === 0) {
+    <p class="favs__muted">Nothing saved yet.</p>
+  } @else {
+    @for (type of types; track type) {
+      @if (byType(type).length > 0) {
+        <section class="group">
+          <h2>{{ label(type) }}</h2>
+          <ul>
+            @for (item of byType(type); track item.id) {
+              <li>
+                <span class="group__name">{{ item.displayName }}</span>
+                <span class="group__ref">{{ item.entityRef }}</span>
+                <button type="button" (click)="remove(item)" aria-label="Remove">&times;</button>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+    }
+  }
+</section>

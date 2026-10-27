@@ -1,0 +1,59 @@
+name: f1-chatbot
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: f1-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-f1app}
+      POSTGRES_USER: ${POSTGRES_USER:-f1app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-f1app}
+    ports:
+      - "5432:5432"          # exposed so you can psql / DBeaver into it from the host
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-f1app} -d ${POSTGRES_DB:-f1app}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ../backend
+    container_name: f1-backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-f1app}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-f1app}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-f1app}
+      APP_CORS_ALLOWED_ORIGINS: http://localhost:4200,http://localhost:8081
+      # Phase 4 will read these; harmless while unset
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      APP_JWT_SECRET: ${APP_JWT_SECRET:-}
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ../frontend
+    container_name: f1-frontend
+    depends_on:
+      - backend
+    ports:
+      - "8081:80"
+
+volumes:
+  pgdata:

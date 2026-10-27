@@ -1,0 +1,41 @@
+<section class="chat">
+  <header class="chat__head">
+    <h1>Paddock Assistant</h1>
+    <p>Ask about any race, driver or championship from 1950 onward.</p>
+  </header>
+
+  <div class="chat__log" #scroller>
+    @for (message of messages(); track $index) {
+      <div class="msg" [class.msg--user]="message.role === 'user'" [class.msg--failed]="message.failed">
+        <span class="msg__who">{{ message.role === 'user' ? 'You' : 'Assistant' }}</span>
+        <p class="msg__text">{{ message.text }}</p>
+      </div>
+    } @empty {
+      <div class="empty">
+        <p>Try one of these:</p>
+        <div class="empty__chips">
+          @for (example of examples; track example) {
+            <button type="button" class="chip" (click)="useExample(example)">{{ example }}</button>
+          }
+        </div>
+      </div>
+    }
+
+    @if (pending()) {
+      <div class="msg">
+        <span class="msg__who">Assistant</span>
+        <p class="msg__text msg__text--pending">Checking the timing screens&hellip;</p>
+      </div>
+    }
+  </div>
+
+  <div class="composer">
+    <textarea
+      rows="2"
+      placeholder="Ask about a race, a driver, a season&hellip;"
+      [(ngModel)]="draft"
+      (keydown)="onKeydown($event)"
+      [disabled]="pending()"></textarea>
+    <button type="button" (click)="send()" [disabled]="pending() || !draft.trim()">Send</button>
+  </div>
+</section>

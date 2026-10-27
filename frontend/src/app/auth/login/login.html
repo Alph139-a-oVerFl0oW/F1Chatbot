@@ -1,0 +1,36 @@
+<section class="auth">
+  <h1 class="auth__title">{{ mode() === 'login' ? 'Sign in' : 'Create an account' }}</h1>
+  <p class="auth__subtitle">Save favourite drivers, teams and circuits.</p>
+
+  <div class="auth__tabs">
+    <button type="button" [class.active]="mode() === 'login'" (click)="switchTo('login')">Sign in</button>
+    <button type="button" [class.active]="mode() === 'register'" (click)="switchTo('register')">Register</button>
+  </div>
+
+  <div class="auth__form">
+    <label for="email">Email</label>
+    <input id="email" type="email" autocomplete="email" [(ngModel)]="email" [disabled]="pending()" />
+
+    @if (mode() === 'register') {
+      <label for="displayName">Display name</label>
+      <input id="displayName" type="text" autocomplete="nickname" [(ngModel)]="displayName" [disabled]="pending()" />
+    }
+
+    <label for="password">Password</label>
+    <input
+      id="password"
+      type="password"
+      [attr.autocomplete]="mode() === 'login' ? 'current-password' : 'new-password'"
+      [(ngModel)]="password"
+      [disabled]="pending()"
+      (keydown.enter)="submit()" />
+
+    @if (error(); as message) {
+      <p class="auth__error">{{ message }}</p>
+    }
+
+    <button class="auth__submit" type="button" (click)="submit()" [disabled]="pending()">
+      {{ pending() ? 'Working…' : (mode() === 'login' ? 'Sign in' : 'Create account') }}
+    </button>
+  </div>
+</section>

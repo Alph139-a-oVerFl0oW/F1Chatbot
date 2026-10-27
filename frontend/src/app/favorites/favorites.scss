@@ -1,0 +1,132 @@
+.favs {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: var(--f1-white-dim);
+    font-size: 0.9rem;
+    margin: 0.25rem 0 1.5rem;
+
+    code {
+      background: #1a1a24;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.85em;
+    }
+  }
+
+  &__add {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    select,
+    input {
+      background: #1a1a24;
+      color: var(--f1-white);
+      border: 1px solid #2a2a35;
+      border-radius: 6px;
+      padding: 0.5rem 0.6rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    input {
+      flex: 1;
+
+      &:focus {
+        outline: none;
+        border-color: var(--f1-red);
+      }
+    }
+
+    button {
+      background: var(--f1-red);
+      color: var(--f1-white);
+      border: none;
+      border-radius: 6px;
+      padding: 0 1.2rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__error {
+    color: var(--f1-red);
+    font-size: 0.85rem;
+  }
+
+  &__muted {
+    color: var(--f1-white-dim);
+    font-size: 0.9rem;
+  }
+}
+
+.group {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--f1-white-dim);
+    margin: 0 0 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #1a1a24;
+    border: 1px solid #2a2a35;
+    border-left: 3px solid var(--f1-red);
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  &__name {
+    flex: 1;
+  }
+
+  &__ref {
+    color: var(--f1-white-dim);
+    font-size: 0.8rem;
+  }
+
+  li button {
+    background: none;
+    border: none;
+    color: var(--f1-white-dim);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 0.25rem;
+
+    &:hover {
+      color: var(--f1-red);
+    }
+  }
+}

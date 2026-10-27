@@ -1,0 +1,128 @@
+<section class="dash">
+  <h1 class="dash__title">Race Control</h1>
+  <p class="dash__subtitle">Formula 1 results and championships, 1950 to today.</p>
+
+  <div class="dash__status" [class.dash__status--online]="state() === 'online'" [class.dash__status--offline]="state() === 'offline'">
+    @switch (state()) {
+      @case ('checking') {
+        <span class="dot"></span> Checking connection to backend&hellip;
+      }
+      @case ('online') {
+        <span class="dot"></span> Connected to {{ serviceName() }}
+      }
+      @case ('offline') {
+        <span class="dot"></span> Backend unreachable &mdash; start it with <code>docker compose up</code>
+      }
+    }
+  </div>
+
+  @if (loading()) {
+    <p class="dash__muted">Loading championship data&hellip;</p>
+  }
+
+  @if (loadError(); as error) {
+    <p class="dash__error">{{ error }}</p>
+  }
+
+  @if (overview(); as data) {
+    <div class="stats">
+      <div class="stat">
+        <span class="stat__value">{{ data.totalRaces }}</span>
+        <span class="stat__label">Grands Prix</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">{{ data.totalDrivers }}</span>
+        <span class="stat__label">Drivers</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">{{ data.totalConstructors }}</span>
+        <span class="stat__label">Constructors</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value">{{ data.latestSeason }}</span>
+        <span class="stat__label">Latest season</span>
+      </div>
+    </div>
+
+    @if (data.latestRace; as race) {
+      <section class="panel">
+        <header class="panel__head">
+          <h2>{{ race.name }}</h2>
+          <span class="panel__meta">
+            Round {{ race.round }}, {{ race.season }} &middot; {{ race.circuitName }}, {{ race.locality }}
+            @if (race.date) { &middot; {{ race.date }} }
+          </span>
+        </header>
+
+        <ol class="podium">
+          @for (row of podium(); track row.driverRef) {
+            <li class="podium__slot">
+              <span class="podium__pos">{{ row.position }}</span>
+              <span class="podium__driver">{{ row.driverName }}</span>
+              <span class="podium__team">{{ row.constructorName }}</span>
+              <span class="podium__time">{{ row.time || row.status }}</span>
+            </li>
+          } @empty {
+            <li class="dash__muted">No results recorded for this race yet.</li>
+          }
+        </ol>
+      </section>
+    }
+
+    <div class="season-picker">
+      <label for="season">Championship season</label>
+      <select id="season" (change)="onSeasonChange($any($event.target).value)">
+        @for (year of seasons(); track year) {
+          <option [value]="year" [selected]="year === selectedSeason()">{{ year }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="tables">
+      <section class="panel">
+        <header class="panel__head"><h2>Drivers' championship</h2></header>
+        <table class="table">
+          <thead>
+            <tr><th>#</th><th>Driver</th><th class="num">Wins</th><th class="num">Points</th></tr>
+          </thead>
+          <tbody>
+            @for (row of topDrivers(); track row.driverRef) {
+              <tr>
+                <td class="pos">{{ row.positionText }}</td>
+                <td>
+                  {{ row.driverName }}
+                  @if (row.driverCode) { <span class="code">{{ row.driverCode }}</span> }
+                </td>
+                <td class="num">{{ row.wins }}</td>
+                <td class="num">{{ row.points }}</td>
+              </tr>
+            } @empty {
+              <tr><td colspan="4" class="dash__muted">No standings for this season.</td></tr>
+            }
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <header class="panel__head"><h2>Constructors' championship</h2></header>
+        <table class="table">
+          <thead>
+            <tr><th>#</th><th>Team</th><th class="num">Wins</th><th class="num">Points</th></tr>
+          </thead>
+          <tbody>
+            @for (row of constructorStandings(); track row.constructorRef) {
+              <tr>
+                <td class="pos">{{ row.positionText }}</td>
+                <td>{{ row.constructorName }}</td>
+                <td class="num">{{ row.wins }}</td>
+                <td class="num">{{ row.points }}</td>
+              </tr>
+            } @empty {
+              <tr><td colspan="4" class="dash__muted">No constructors' championship before 1958.</td></tr>
+            }
+          </tbody>
+        </table>
+      </section>
+    </div>
+  }
+</section>

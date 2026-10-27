@@ -1,0 +1,31 @@
+<header class="nav">
+  <div class="nav__brand">
+    <span class="nav__brand-mark">F1</span>
+    <span class="nav__brand-text">Paddock<strong>AI</strong></span>
+  </div>
+  <nav class="nav__links">
+    @for (link of links(); track link.path) {
+      <a
+        class="nav__link"
+        [routerLink]="link.path"
+        routerLinkActive="nav__link--active"
+        [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+      >
+        {{ link.label }}
+      </a>
+    }
+
+    @if (auth.user(); as user) {
+      <span class="nav__user">{{ user.displayName }}</span>
+      <button class="nav__signout" type="button" (click)="signOut()">Sign out</button>
+    } @else {
+      <a
+        class="nav__link"
+        routerLink="/auth/login"
+        routerLinkActive="nav__link--active"
+      >
+        Sign in
+      </a>
+    }
+  </nav>
+</header>
