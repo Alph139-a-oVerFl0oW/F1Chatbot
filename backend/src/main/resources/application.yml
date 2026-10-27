@@ -1,0 +1,90 @@
+spring:
+  application:
+    name: f1-backend
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/f1app}
+    username: ${SPRING_DATASOURCE_USERNAME:f1app}
+    password: ${SPRING_DATASOURCE_PASSWORD:f1app}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate      # Flyway owns the schema, never Hibernate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+langchain4j:
+  open-ai:
+    chat-model:
+      # Groq is OpenAI-compatible; only base URL, key and model name differ.
+      # Chosen over Gemini because Gemini 3 requires thought_signature
+      # round-tripping that the OpenAI client can't represent, and Gemini 2.x
+      # is closed to new API keys.
+      base-url: https://api.groq.com/openai/v1
+      api-key: ${GROQ_API_KEY:not-set}
+      # model-name: ${LLM_MODEL:llama-3.3-70b-versatile}
+      model-name: ${LLM_MODEL:openai/gpt-oss-120b}
+      temperature: 0.2
+      timeout: 60s
+      max-retries: 2
+      log-requests: false
+      log-responses: false
+
+# langchain4j:
+#   open-ai:
+#     chat-model:
+#       # Gemini exposes an OpenAI-compatible API, so the OpenAI client works
+#       # unchanged — only the base URL and model name differ.
+#       base-url: https://generativelanguage.googleapis.com/v1beta/openai
+#       api-key: ${GEMINI_API_KEY:not-set}
+#       model-name: ${LLM_MODEL:gemini-2.5-flash-lite}
+#       temperature: 0.2
+#       timeout: 60s
+#       max-retries: 2
+#       log-requests: true
+#       log-responses: true
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+app:
+  jolpica:
+    base-url: https://api.jolpi.ca/ergast/f1
+    user-agent: f1-chatbot/0.1
+    requests-per-second: 2      # upstream burst limit is 4
+    requests-per-hour: 450      # upstream sustained limit is 500
+    page-size: 100              # upstream max is 1000
+    first-season: 1950
+    throttle-backoff-seconds: 60
+    max-retries: 3
+    scheduled-refresh-enabled: true
+    refresh-cron: "0 15 3 * * MON"
+  cors:
+    # Angular dev server + the nginx-served container
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:4200,http://localhost:8081}
+
+  jwt:
+    secret: ${APP_JWT_SECRET:}
+    expiry-hours: 24
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.flywaydb: INFO
